@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Pomodoro Timer with To-do List</title>
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="title-container">
+    <h1>Pomodoro Timer with To-do List</h1>
+  </div>
+  <div class="container">
+    <div class="to-do-container">
+      <h2>My To-do List</h2>
+      <p>Click the item once you complete a task, and delete by clicking the trash icon!</p>
+      <div class="add-task">
+        <input type="text" placeholder="Item" id="form">
+        <button class="add-btn" onclick="addItem()">Add</button>
+        <div class="task-wrapper">
+          <ul id="items"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pomodoro-container">
+      <h2>My Pomodoro Timer</h2>
+      <p id="timer-el">25:00</p>
+      <div class="button-container">
+        <button class="timer-btn" id="timer-start-button" onclick="timerStart()">Go</button>
+        <button class="timer-btn" id="timer-pause-button" onclick="timerPause()">Pause</button>
+        <button class="timer-btn" id="timer-reset-button" onclick="timerReset()">Reset</button>
+        <button class="timer-btn" id="timer-break-button" onclick="timerBreak()">Break</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-me" class="container">
+    <h2 class="contact-heading">In Progress 🔨</h2>
+    <p>Currently working on more tools, please keep in touch if you want to collaborate or suggest new features!</p>
+      
+    <div class="user-info">
+      <form name="contact">
+        <input type="text" placeholder="Your Name" id="name" name="name" required maxlength="40" onkeypress="limitText(this, 39);">
+        <input type="email" placeholder="Your Email" id="email" name="email" required maxlength="40" onkeypress="limitText(this, 39);">
+        <textarea id="message" placeholder="Your Message" required maxlength="200" onkeypress="limitText(this, 199);"></textarea>
+        <button class="submit-btn" onclick="submitItem()">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>
